@@ -1,0 +1,218 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+
+\singlespacing
+
+
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+
+\numberwithin{equation}{subsection}
+
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+
+\renewcommand{\thefigure}{\theproblem}
+
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 18}
+\author{KUSUMA PRIYA\\EE20MTECH11007}
+
+\maketitle
+\newpage
+
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Download codes from 
+%
+\begin{lstlisting}
+https://github.com/KUSUMAPRIYAPULAVARTY/assignment18
+\end{lstlisting}
+%
+ 
+\section{QUESTION}
+Use theorem 20 to prove the following.If $\vec{W}$ is a subspace of a finite dimensional vector space $\vec{V}$ and if $\cbrak{g_1,g_2,\hdots,g_r}$ is any basis for $\vec{W}^0$ then
+\begin{align}
+    \vec{W}=\bigcap_{i=1}^r \vec{N}_{g_i}
+\end{align}
+
+%
+
+\section{Theorem 20}
+Let $g,f_1,f_2,\hdots,f_r$ be linear functionals on vector space $\vec{V}$ with respective null spaces $\vec{N},\vec{N}_1,\hdots,\vec{N}_r$.\\Then $g$ is a linear combination of $f_1,\hdots ,f_r$ if and only if $\vec{N}$ contains the intersection $\vec{N}_1 \cap \vec{N}_2\cap \hdots \cap \vec{N}_r$.
+\section{Solution}
+\begin{table}[!h]
+\centering
+\begin{tabular}{|p{3cm}|p{5cm}|}
+\hline
+\textbf{PARAMETERS}&\textbf{DESCRIPTION}\\
+\hline
+$\vec{V}$& Finite dimensional vector space with $dim(\vec{V})=n$\\
+\hline
+$\vec{W}$ & Subspace of $\vec{V}$\\
+\hline
+$\vec{W}^0$ & Annihilator of $\vec{W}$\\
+\hline
+$g \in \vec{W}^0$ & $g(\vec{w})=0 \forall \vec{w} \in \vec{W}$\\
+\hline
+$\cbrak{g_1,g_2,\hdots,g_r}$& basis for $\vec{W}^0$\\
+\hline
+$\vec{N}_{g_i}$ & Null space of $g_i$\\
+\hline
+\end{tabular}
+\caption{Input Parameters}
+\end{table}
+Any $g \in \vec{W}^0$ can be written as
+\begin{align}
+    g=\sum_{i=1}^r c_ig_i
+\end{align}
+So, from the theorem, if $\vec{N}$ is nullspace of $g$
+\begin{align}
+    \bigcap_{i=1}^r \vec{N}_{g_i} \subseteq \vec{N}\label{1}\\
+    \forall \vec{w} \in \vec{W},g(\vec{w})=0\label{2}\\
+   \eqref{1},\eqref{2} \implies \vec{W} \subseteq \bigcap_{i=1}^r \vec{N}_{g_i}\label{3}
+\end{align}
+To prove using method of contradiction, assume
+\begin{align}
+   \vec{W} \neq \bigcap_{i=1}^r \vec{N}_{g_i} \label{4}
+\end{align}
+From \eqref{3},\eqref{4} there exists a vector  
+\begin{align}
+ \vec{e} \in  \bigcap_{i=1}^r \vec{N}_{g_i}, \vec{e} \notin \vec{W}\\
+ \text{So  }\forall g \in \vec{W}^0, g(\vec{e})=0 \label{5}
+\end{align}
+Since $g$ is a linear functional on $\vec{V}$,
+\begin{align}
+    \eqref{5} \implies \vec{e} \in \vec{V}
+\end{align}
+Let us define a functional $f$ on $\vec{V}$ such that 
+\begin{align}
+    f(\alpha)=
+    \begin{cases}
+         0 & \text{ for }     \alpha \in \vec{W}\\
+        \neq 0 & \text{ for } \alpha \in \vec{V},\alpha \notin \vec{W}
+    \end{cases}\\
+  \therefore f \in \vec{W}^0 \text{ and } f(e) \neq 0  
+\end{align}
+which contradicts with \eqref{5}\\
+Hence 
+\begin{align}
+     \vec{W}=\bigcap_{i=1}^r \vec{N}_{g_i}
+\end{align}
+\end{document}
+
+
