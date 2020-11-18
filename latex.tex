@@ -176,43 +176,72 @@ $\vec{N}_{g_i}$ & Null space of $g_i$\\
 \end{tabular}
 \caption{Input Parameters}
 \end{table}
-Any $g \in \vec{W}^0$ can be written as
-\begin{align}
-    g=\sum_{i=1}^r c_ig_i
-\end{align}
-So, from the theorem, if $\vec{N}$ is nullspace of $g$
-\begin{align}
-    \bigcap_{i=1}^r \vec{N}_{g_i} \subseteq \vec{N}\label{1}\\
-    \forall \vec{w} \in \vec{W},g(\vec{w})=0\label{2}\\
-   \eqref{1},\eqref{2} \implies \vec{W} \subseteq \bigcap_{i=1}^r \vec{N}_{g_i}\label{3}
-\end{align}
-To prove using method of contradiction, assume
-\begin{align}
-   \vec{W} \neq \bigcap_{i=1}^r \vec{N}_{g_i} \label{4}
-\end{align}
-From \eqref{3},\eqref{4} there exists a vector  
-\begin{align}
- \vec{e} \in  \bigcap_{i=1}^r \vec{N}_{g_i}, \vec{e} \notin \vec{W}\\
- \text{So  }\forall g \in \vec{W}^0, g(\vec{e})=0 \label{5}
-\end{align}
-Since $g$ is a linear functional on $\vec{V}$,
-\begin{align}
-    \eqref{5} \implies \vec{e} \in \vec{V}
-\end{align}
-Let us define a functional $f$ on $\vec{V}$ such that 
-\begin{align}
-    f(\alpha)=
-    \begin{cases}
-         0 & \text{ for }     \alpha \in \vec{W}\\
-        \neq 0 & \text{ for } \alpha \in \vec{V},\alpha \notin \vec{W}
-    \end{cases}\\
-  \therefore f \in \vec{W}^0 \text{ and } f(e) \neq 0  
-\end{align}
-which contradicts with \eqref{5}\\
-Hence 
-\begin{align}
-     \vec{W}=\bigcap_{i=1}^r \vec{N}_{g_i}
-\end{align}
+
+
+
+\begin{table*}[!t]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{STATEMENT} & \textbf{DESCRIPTION}\\
+    \hline
+      $g \in \vec{W}^0$   & 
+      \parbox{10cm}{\begin{align}
+          g=\sum_{i=1}^r c_ig_i
+      \end{align}}\\
+      \hline
+       & From the theorem,\\
+       If $\vec{N}$ is nullspace of $g$  & 
+       \parbox{10cm}{\begin{align}
+           \bigcap_{i=1}^r \vec{N}_{g_i} \subseteq \vec{N}\label{1}
+       \end{align}}\\
+       \hline
+       $ \forall \vec{w} \in \vec{W}$ &
+       \parbox{10cm}{\begin{align}
+          g(\vec{w})=0\label{2} 
+       \end{align}}\\
+       \hline
+       $ \eqref{1},\eqref{2} \implies$&
+        \parbox{10cm}{\begin{align}
+           \vec{W} \subseteq \bigcap_{i=1}^r \vec{N}_{g_i}\label{3} 
+       \end{align}}\\
+       \hline
+       Starting with method of contradiction &
+        \parbox{10cm}{\begin{align}
+          \vec{W} \neq \bigcap_{i=1}^r \vec{N}_{g_i} \label{4} 
+       \end{align}}\\
+       \hline
+       From \eqref{3},\eqref{4} there exists & \\
+       a vector $\vec{e}$ such that &
+        \parbox{10cm}{\begin{align}
+          \vec{e} \in  \bigcap_{i=1}^r \vec{N}_{g_i}, \vec{e} \notin \vec{W}\\
+           \text{So  }\forall g \in \vec{W}^0, g(\vec{e})=0 \label{5}
+       \end{align}}\\
+       \hline
+       Since $g$ is a linear functional on $\vec{V}$ &
+       \parbox{10cm}{\begin{align}
+          \eqref{5} \implies \vec{e} \in \vec{V}
+       \end{align}}\\
+       \hline
+       $f$ &
+       \parbox{10cm}{A linear functional on $\vec{V}$ defined as\\
+       \begin{align}
+         f(\alpha)
+         \begin{cases}
+         = 0 & \text{ for }     \alpha \in \vec{W}\\
+         \neq 0 & \text{ for } \alpha \in \vec{V},\alpha \notin \vec{W}
+       \end{cases}\\
+        \therefore f \in \vec{W}^0 \text{ and } f(e) \neq 0  \label{6}
+       \end{align}}\\
+       \hline
+       \eqref{5},\eqref{6} contradict each other & 
+       \parbox{10cm}{\begin{align}
+          \vec{W}=\bigcap_{i=1}^r \vec{N}_{g_i}
+       \end{align}}\\
+       \hline
+    \end{tabular}
+    \caption*{TABLE1: Proof}
+\end{table*}
 \end{document}
 
 
